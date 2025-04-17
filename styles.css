@@ -134,5 +134,27 @@ footer {
     }
 }
 
+.bio-img-row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.bio-img-row img {
+    max-width: 100%;
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bio-img-row img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
 
 
