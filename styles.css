@@ -153,9 +153,25 @@ footer {
   
     .bio-img img {
       max-width: 100%;
-      width: 300px;
     }
   }
+
+  @media (min-width: 769px) {
+    .bio-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: nowrap;
+    }
+  
+    .bio-img img {
+      width: 650px;
+      height: auto;
+      border-radius: 10px;
+    }
+  }
+  
   
 
 
