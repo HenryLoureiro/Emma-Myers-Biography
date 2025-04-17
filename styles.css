@@ -96,6 +96,10 @@ body:hover {
     background-color: #121212; /* Fundo mais escuro ao passar o mouse */
 }
 
+.only-desktop {
+    display: block;
+  }
+
 footer {
     text-align: center;
     margin-top: 40px;
@@ -132,18 +136,15 @@ footer {
     .bio-text {
         margin-right: 0;
     }
+
+    .only-desktop {
+        display: none;
+    }
 }
 
-.only-desktop {
-    display: block;
-  }
-  
-  @media (max-width: 768px) {
-    .only-desktop {
-      display: none;
-    }
-  }
-  
+
+
+
 
 
 
