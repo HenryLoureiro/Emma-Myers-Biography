@@ -142,6 +142,22 @@ footer {
     }
 }
 
+@media (min-width: 769px) {
+    .bio-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: nowrap;
+    }
+  
+    .bio-img img {
+      max-width: 100%;
+      width: 300px;
+    }
+  }
+  
+
 
 
 
