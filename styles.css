@@ -106,4 +106,33 @@ footer {
     border-top: 1px solid #333;
 }
 
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .bio-img img {
+        max-width: 100%;
+    }
+
+    .bio-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bio-text {
+        margin-right: 0;
+    }
+}
+
+
 
