@@ -1,0 +1,98 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e; /* fundo escuro */
+    color: white; /* texto branco */
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s ease; /* Transição suave ao mudar o fundo */
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #f0f0f0;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Deixa o título em maiúsculas */
+    letter-spacing: 2px; /* Aumenta o espaçamento entre as letras */
+}
+
+h3 {
+    text-align: center;
+    font-size: 24px;
+    color: #f0f0f0;
+    margin-bottom: 15px;
+    font-weight: 600; /* Negrito nos subtítulos */
+    text-transform: capitalize; /* Deixa os subtítulos mais destacados */
+    transition: color 0.3s ease; /* Transição suave na cor */
+}
+
+h3:hover {
+    color: #ff6347; /* Muda a cor do subtítulo ao passar o mouse */
+}
+
+/* Seções da biografia */
+.bio-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+/* Texto da biografia */
+.bio-text {
+    flex: 1;
+    margin-right: 20px;
+    font-size: 16px;
+    color: #d0d0d0;
+    line-height: 1.8;
+}
+
+/* Imagens da biografia */
+.bio-img {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.bio-img img {
+    max-width: 500px; /* Reduz o tamanho máximo da imagem */
+    height: auto;
+    border-radius: 10px; /* borda suave nas imagens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* sombra leve nas imagens */
+    margin-top: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de transição */
+}
+
+.bio-img img:hover {
+    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Sombra mais forte ao passar o mouse */
+}
+
+/* Parágrafos */
+p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #d0d0d0;
+}
+
+/* Adicionando uma cor de fundo para as seções */
+.bio-section:nth-child(even) {
+    background-color: #2a2a2a; /* Fundo cinza escuro nas seções pares */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.bio-section:nth-child(odd) {
+    background-color: #333333; /* Fundo um pouco mais claro nas seções ímpares */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Transição de fundo do body */
+body:hover {
+    background-color: #121212; /* Fundo mais escuro ao passar o mouse */
+}
+
