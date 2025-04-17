@@ -96,3 +96,14 @@ body:hover {
     background-color: #121212; /* Fundo mais escuro ao passar o mouse */
 }
 
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #111;
+    color: #aaa;
+    font-size: 14px;
+    border-top: 1px solid #333;
+}
+
+
