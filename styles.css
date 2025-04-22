@@ -171,3 +171,29 @@ footer {
     border-radius: 10px;
   }
 }
+/* Estilo padrão: esconde o carousel no PC */
+.mobile-carousel {
+  display: none;
+}
+
+/* Só ativa o slider no mobile */
+@media (max-width: 768px) {
+  .mobile-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .carousel-slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+  }
+
+  .carousel-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+}
