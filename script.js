@@ -1,40 +1,25 @@
-let currentSlide = 0;
+let current = 0;
+const slides = document.querySelectorAll('.mobile-slider .slide');
 
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
-
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        if (i === index) {
-            slide.classList.add('active');
-        }
-    });
+function show(n) {
+  slides.forEach((s, i) => s.style.display = i === n ? 'block' : 'none');
 }
 
 function moveSlide(step) {
-    currentSlide = (currentSlide + step + totalSlides) % totalSlides;
-    showSlide(currentSlide);
+  current = (current + step + slides.length) % slides.length;
+  show(current);
 }
 
-// Inicializa o slider
-showSlide(currentSlide);
+// inicializa
+show(current);
 
-// Adiciona suporte para swipe (arrastar) nos dispositivos móveis
+// swipe
 let startX = 0;
-let endX = 0;
+const container = document.querySelector('.slider-container');
 
-const sliderContainer = document.querySelector('.slider-container');
-
-sliderContainer.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX;
-});
-
-sliderContainer.addEventListener('touchend', (e) => {
-    endX = e.changedTouches[0].clientX;
-    if (startX > endX) {
-        moveSlide(1); // Slide para a próxima imagem
-    } else if (startX < endX) {
-        moveSlide(-1); // Slide para a imagem anterior
-    }
+container.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+container.addEventListener('touchend', e => {
+  const endX = e.changedTouches[0].clientX;
+  if (startX - endX > 30) moveSlide(1);
+  else if (endX - startX > 30) moveSlide(-1);
 });

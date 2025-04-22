@@ -32,65 +32,41 @@ h3:hover {
   color: #ff6347; /* Muda a cor do subtítulo ao passar o mouse */
 }
 
-/* Slider de imagens */
-.slider-container {
-  position: relative;
-  max-width: 100%;
-  margin: auto;
-  overflow: hidden;
+/* Seções da biografia */
+.bio-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  justify-content: center;
 }
 
-.slide {
-  display: none;
+/* Texto da biografia */
+.bio-text {
+  flex: 1;
+  margin-right: 20px;
+  font-size: 16px;
+  color: #d0d0d0;
+  line-height: 1.8;
 }
 
-.slide img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+/* Imagens da biografia */
+.bio-img {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.bio-img img {
+  max-width: 500px; /* Reduz o tamanho máximo da imagem */
+  height: auto;
+  border-radius: 10px; /* borda suave nas imagens */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* sombra leve nas imagens */
   margin-top: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de transição */
 }
 
-.slider-container .active {
-  display: block;
-}
-
-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  font-size: 24px;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 1;
-}
-
-.prev {
-  left: 0;
-}
-
-.next {
-  right: 0;
-}
-
-/* Estilo do slider em dispositivos móveis */
-@media (max-width: 768px) {
-  .slider-container {
-      width: 100%;
-      height: auto;
-  }
-
-  .slide img {
-      max-width: 100%;
-  }
-
-  button {
-      font-size: 18px;
-  }
+.bio-img img:hover {
+  transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Sombra mais forte ao passar o mouse */
 }
 
 /* Parágrafos */
@@ -100,9 +76,98 @@ p {
   color: #d0d0d0;
 }
 
-/* Responsividade */
+/* Adicionando uma cor de fundo para as seções */
+.bio-section:nth-child(even) {
+  background-color: #2a2a2a; /* Fundo cinza escuro nas seções pares */
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.bio-section:nth-child(odd) {
+  background-color: #333333; /* Fundo um pouco mais claro nas seções ímpares */
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Transição de fundo do body */
+body:hover {
+  background-color: #121212; /* Fundo mais escuro ao passar o mouse */
+}
+
+.only-desktop {
+  display: block;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #111;
+  color: #aaa;
+  font-size: 14px;
+  border-top: 1px solid #333;
+}
+
+/* Responsividade para telas menores */
 @media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .bio-img img {
+    max-width: 100%;
+  }
+
+  .bio-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bio-text {
+    margin-right: 0;
+  }
+
+  .only-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
   .bio-img {
-      text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+  }
+
+  .bio-img img {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 769px) {
+  .bio-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: nowrap;
+  }
+
+  .bio-img img {
+    width: 650px;
+    height: auto;
+    border-radius: 10px;
   }
 }
