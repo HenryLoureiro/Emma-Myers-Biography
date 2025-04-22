@@ -1,12 +1,11 @@
-/* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
-    background-color: #1e1e1e; /* fundo escuro */
-    color: white; /* texto branco */
+    background-color: #1e1e1e;
+    color: white;
     line-height: 1.6;
     margin: 0;
     padding: 20px;
-    transition: background-color 0.3s ease; /* Transição suave ao mudar o fundo */
+    transition: background-color 0.3s ease;
 }
 
 h1 {
@@ -14,8 +13,8 @@ h1 {
     font-size: 36px;
     color: #f0f0f0;
     margin-bottom: 20px;
-    text-transform: uppercase; /* Deixa o título em maiúsculas */
-    letter-spacing: 2px; /* Aumenta o espaçamento entre as letras */
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 h3 {
@@ -23,16 +22,15 @@ h3 {
     font-size: 24px;
     color: #f0f0f0;
     margin-bottom: 15px;
-    font-weight: 600; /* Negrito nos subtítulos */
-    text-transform: capitalize; /* Deixa os subtítulos mais destacados */
-    transition: color 0.3s ease; /* Transição suave na cor */
+    font-weight: 600;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
 }
 
 h3:hover {
-    color: #ff6347; /* Muda a cor do subtítulo ao passar o mouse */
+    color: #ff6347;
 }
 
-/* Seções da biografia */
 .bio-section {
     display: flex;
     align-items: center;
@@ -40,7 +38,6 @@ h3:hover {
     justify-content: center;
 }
 
-/* Texto da biografia */
 .bio-text {
     flex: 1;
     margin-right: 20px;
@@ -49,56 +46,56 @@ h3:hover {
     line-height: 1.8;
 }
 
-/* Imagens da biografia */
 .bio-img {
     text-align: center;
     margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .bio-img img {
-    max-width: 500px; /* Reduz o tamanho máximo da imagem */
+    max-width: 100%;
+    width: 650px;
     height: auto;
-    border-radius: 10px; /* borda suave nas imagens */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* sombra leve nas imagens */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     margin-top: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de transição */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .bio-img img:hover {
-    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Sombra mais forte ao passar o mouse */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
-/* Parágrafos */
 p {
     margin-bottom: 15px;
     font-size: 16px;
     color: #d0d0d0;
 }
 
-/* Adicionando uma cor de fundo para as seções */
-.bio-section:nth-child(even) {
-    background-color: #2a2a2a; /* Fundo cinza escuro nas seções pares */
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
+.bio-section:nth-child(even),
 .bio-section:nth-child(odd) {
-    background-color: #333333; /* Fundo um pouco mais claro nas seções ímpares */
+    background-color: #2a2a2a;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
 }
 
-/* Transição de fundo do body */
 body:hover {
-    background-color: #121212; /* Fundo mais escuro ao passar o mouse */
+    background-color: #121212;
 }
 
 .only-desktop {
     display: block;
-  }
+}
+
+.always-show {
+    display: none;
+}
 
 footer {
     text-align: center;
@@ -110,7 +107,6 @@ footer {
     border-top: 1px solid #333;
 }
 
-/* Responsividade para telas menores */
 @media (max-width: 768px) {
     body {
         padding: 10px;
@@ -140,43 +136,8 @@ footer {
     .only-desktop {
         display: none;
     }
+
+    .always-show {
+        display: block;
+    }
 }
-
-@media (min-width: 769px) {
-    .bio-img {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: nowrap;
-    }
-  
-    .bio-img img {
-      max-width: 100%;
-    }
-  }
-
-  @media (min-width: 769px) {
-    .bio-img {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 30px;
-      flex-wrap: nowrap;
-    }
-  
-    .bio-img img {
-      width: 650px;
-      height: auto;
-      border-radius: 10px;
-    }
-  }
-  
-  
-
-
-
-
-
-
-
